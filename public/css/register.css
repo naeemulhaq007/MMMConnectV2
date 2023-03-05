@@ -1,0 +1,42 @@
+#authenticationBox {
+    position: relative;
+    top: 2%;
+}
+
+#wrapper {
+    background-image: url("../images/backgrounds/seaside.jpg"); /* https://www.maxpixel.net/Sea-side-Wave-See-Nature-Beach-Background-1973849 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-width: 1080px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#loginHeader {
+    background-color: #209cee;
+    color: rgb(240, 240, 240);
+    width: 90%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    padding: 5%;
+}
+
+#loginHeader > h1 > span {
+    font-family: "Tomcat";
+}
+
+#loginHeader > h1 {
+    color: rgb(240, 240, 240);
+}
+
+#register {
+    display: none;
+}
+
+.input {
+    text-align: center;
+}

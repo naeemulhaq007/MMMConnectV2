@@ -1,0 +1,496 @@
+/**
+    Author: William Qi
+    Licence: MIT
+    
+    Made this because I'm going to be reusing CSS alot. lmao
+    Named it pizza.css because it sounds cool. But not really. Maybe it was because I was hungry?
+
+*/
+
+@font-face {
+    font-family: "Tomcat";
+    src: url("../fonts/TOMCAT.otf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+html, body {
+    min-height: 100%;
+    padding: 0;
+    width: 100%;
+    min-width: 1080px;
+    margin: 0;
+    font-family: Roboto;
+}
+
+.full {
+    min-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.one-third {
+    min-width: 33.3%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.one-quarter {
+    min-width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.three-quarters {
+    min-width: 75%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.one-fifth {
+    min-width: 20%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.half {
+    min-width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.seven-tenths {
+    min-width: 70%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.box {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5em;
+    border: 0.3px solid black;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    min-width: 10em;
+    margin: 1em;
+}
+
+.box hr {
+    outline: none;
+    border-top: #00000005;
+}
+
+.notification {
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 1em;
+}
+
+.notification.is-red, .nav.is-red {
+    background: #ff3860;
+    color: white;
+}
+
+.notification.is-green, .nav.is-green {
+    background: #23d160;
+    color: white;
+}
+
+.notification.is-blue, .nav.is-blue {
+    background: #209cee;
+    color: white;
+}
+
+.link {
+    color: #209cee;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.center {
+    margin: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.input {
+    padding: 2%;
+}
+
+.input input[type="text"], .input input[type="password"], .input input[type="email"] {
+    border-radius: 0.2em;
+    border: 1px solid rgb(219, 219, 219);
+    height: 1em;
+    font-size: 100%;
+    padding: 2%;
+    text-align: center;
+}
+
+.input input[type="text"]:focus, .input input[type="password"]:focus, .input input[type="email"]:focus {
+    outline: none;
+    border: 1px solid #1c8cd6;
+}
+
+.input.is-green input[type="text"]:focus, .input.is-green input[type="password"]:focus, .input.is-green input[type="email"]:focus {
+    outline: none;
+    border: 1px solid #1bd81b;
+}
+
+.input.is-red input[type="text"]:focus, .input.is-red input[type="password"]:focus, .input.is-red input[type="email"]:focus {
+    outline: none;
+    border: 1px solid #e90404;
+}
+
+.input input[type="submit"], .input input[type="button"] {
+    min-width: 5em;
+    height: 3em;
+    color: white;
+    background: #1f94e2;
+    border: none;
+    border-radius: 0.2em;
+    font-size: 100%;
+}
+
+.input.is-green input[type="submit"], .input.is-green input[type="button"] {
+    background: #1bd81b;
+}
+
+.input.is-red input[type="submit"], .input.is-red input[type="button"] {
+    background: #e90404;
+}
+
+.input input[type="submit"]:hover, .input input[type="button"]:hover {
+    cursor: pointer;
+}
+
+.nav {
+    height: 3.5em;
+    width: 100%;
+    min-width: 1080px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-left {
+    float: left;
+    display: inline-flex;
+    height: 100%;
+}
+
+.nav-left .logo {
+    font-size: 2em;
+    text-shadow: #0000ff 0.5px 0.5px 0.5px;
+}
+
+.nav-left .logo span {
+    font-family: Tomcat;
+}
+
+.nav-right {
+    float: right;
+    display: inline-flex;
+    height: 100%;
+}
+
+.nav a {
+    /* I got the 2 lines below from https://stackoverflow.com/questions/14862604/html-css-center-text-horizontally-and-vertically-in-a-link as vertical-align was not working. */
+    display: flex;
+    align-items: center;
+
+    color: white !important;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 100%;
+}
+
+.nav.is-blue .nav-right a:hover, .nav.is-blue .nav-left .logo:hover {
+    background: #1e90db;
+}
+
+.nav.is-blue a:active {
+    color: white;
+}
+
+.nav-dropdown {
+    position: fixed;
+    top: 3.5em;
+    right: 0;
+    width: 30%;
+    max-height: 50%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: white;
+    border: 1px solid #f3f3f3;
+    margin-right: 1%;
+    word-wrap: break-word;
+    z-index: 5;
+    display: none;
+}
+
+.nav-dropdown .post .content {
+    width: calc(90% - 64px - 2em);
+}
+
+.nav-dropdown .post {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.nav-dropdown .post .avatar {
+    margin-left: 1em;
+}
+
+.tomcat {
+    font-family: Tomcat;
+}
+
+.image-64x64 {
+    width: 64px;
+    height: 64px;
+}
+
+.image-128x128 {
+    width: 10em;
+    height: 10em;
+}
+
+.image {
+    border-radius: 0.5em;
+}
+
+.post {
+    margin-bottom: 0.5em;
+    padding-bottom: 1em;
+    width: 100%;
+    margin-left: 1em;
+    min-height: 5em;
+}
+
+.post.tint-blue {
+    background: #e9f6fc;
+}
+
+.post .avatar {
+    padding-top: 1em;
+    float: left;
+    margin-right: 1em;
+}
+
+.post .content {
+    padding-top: 1em;
+    padding-left: 1em;
+    width: calc(90% - 64px);
+    float: left;
+}
+
+.search-dropdown .post .content {
+    padding-left: 0;
+}
+
+.post .message-content {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    word-wrap: break-word;
+    min-height: 0.1em;
+    color: black;
+    width: 900px;
+    max-width: 100%;
+}
+
+.post .message-content p {
+    text-overflow: ellipsis;
+}
+
+.post .commentsContainer {
+    background: #e6e6e6;
+    margin-top: 1em;
+    margin-left: 1em;
+    padding-bottom: 7em;
+}
+
+.post img[data-field="attachment"] {
+    max-width: 40em;
+    max-height: 20em;
+}
+
+.post .commentsContainer .comments {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.faded {
+    opacity: 0.5;
+    color: gray;
+}
+
+.faded-dark {
+    opacity: 0.9;
+    color: gray;
+}
+
+.loading {
+    width: 3em;
+    height: 3em;
+    margin-left: 45%;
+    margin-right: 50%;
+}
+
+.keep-right {
+    float: right;
+}
+
+.keep-left {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    height: 1em;
+    color: #1c8cd6;
+}
+
+a:visited {
+    color: #1c8cd6;
+}
+
+textarea {
+    font-family: Roboto;
+}
+
+.tabs {
+    width: 100%;
+}
+
+.tabs ul {
+    list-style: none;
+    width: 100%;
+
+}
+
+.tabs li {
+    display: inline-block;
+    height: 100%;
+    color: black;
+    vertical-align: bottom;
+    margin-right: 2em;
+}
+
+.tabs li.is-active {
+    color: #1c8cd6;
+}
+
+.tabs li:hover {
+    color: #1c8cd6;
+}
+
+.hide {
+    display: none;
+}
+
+.modal .background {
+    background: black;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: none;
+}
+
+.modal .content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal .content .box {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.search input {
+    height: 45%;
+    width: 250px;
+    margin-top: calc(3.5em / 6);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.search i {
+    position: relative;
+    filter: invert(1);
+    right: 2em;
+}
+
+.search-dropdown {
+    width: 93%;
+    background: white;
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+    display: none;
+}
+
+.search-dropdown a {
+    text-shadow: none;
+    font-size: 1em;
+
+}
+
+.search-dropdown .results {
+    background: lightgray;
+}
+
+.search-dropdown .moreResults {
+    padding-left: 25%;
+    background: #24a7ff;
+    font-size: 1.5em;
+}
+
+#messagesUnread {
+    position: relative;
+    z-index: 1;
+    left: calc(16px + 0.1em);
+    margin-bottom: 16px;
+    padding: 0.1em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    background: red;
+}
+
+.message-notification {
+    background: red;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 1em;
+    position: relative;
+    right: 8px;
+    bottom: 8px;
+}
+
+.nav a > .message-notification {
+    margin-right: -16px;
+}

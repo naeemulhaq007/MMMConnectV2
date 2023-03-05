@@ -1,0 +1,23 @@
+body {
+    background: rgb(225, 225, 225);
+}
+
+#wrapper {
+    position: absolute;
+    top: 3.5em;
+    width: 100%;
+}
+
+#avatar {
+    width: 128px;
+    height: 128px;
+}
+
+#invalidFile {
+    display: none;
+}
+
+.input {
+    padding: 0;
+    padding-bottom: 1em;
+}

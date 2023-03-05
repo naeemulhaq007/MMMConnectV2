@@ -1,0 +1,47 @@
+.form-textarea {
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 4em;
+    max-height: 4em;
+    padding: 1em;
+    outline: 0;
+    float: left;
+}
+
+.submitButton {
+    background: #1c8fdb;
+    border: none;
+    vertical-align: top;
+    margin-left: 1%;
+    float: right;
+    position: absolute;
+    border: none;
+    border-radius: 1em;
+    background: #209cee;
+    color: white;
+    font-size: large;
+    height: 4.5em;
+    width: 8%;
+}
+
+#postForm {
+    margin-bottom: 6em;
+}
+
+.commentForm textarea {
+    margin-left: 2em;
+    min-width: 60% !important;
+    max-width: 60% !important;
+}
+
+.commentForm {
+    min-width: 100%;
+}
+
+.deleteComment {
+    display: none;
+}
+
+.post .content:hover > .deleteComment {
+    display: unset;
+}

@@ -1,0 +1,76 @@
+body {
+    background: rgb(225, 225, 225);
+}
+
+/* And this is why I hate CSS, px. REEE */
+#wrapper {
+    position: relative;
+    top: 3.5em;
+    height: calc(100% - 3.8em);
+    max-width: 100%;
+    min-width: 1080px;
+    display: flex;
+}
+
+/* And this is why I hate CSS, px. REEE */
+#feed {
+    max-width: 1080px;
+}
+
+#content {
+    margin-left: 1em;
+}
+
+#userInfo {
+    padding-top: 0.5em;
+    line-height: 1.5em;
+    padding-left: 1em;
+}
+
+.form-textarea {
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 4em;
+    max-height: 4em;
+    padding: 1em;
+    outline: 0;
+    float: left;
+}
+
+.submitButton {
+    background: #1c8fdb;
+    border: none;
+    vertical-align: top;
+    margin-left: 2%;
+    float: right;
+    position: absolute;
+    border: none;
+    border-radius: 1em;
+    background: #209cee;
+    color: white;
+    font-size: large;
+    height: 4.5em;
+    width: 8%;
+}
+
+#postForm {
+    margin-bottom: 6em;
+}
+
+.commentForm textarea {
+    margin-left: 1em;
+    min-width: 70% !important;
+    max-width: 70% !important;
+}
+
+.commentForm {
+    min-width: 100%;
+}
+
+.deleteComment {
+    display: none;
+}
+
+.post .content:hover > .deleteComment {
+    display: unset;
+}
