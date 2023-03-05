@@ -5,12 +5,12 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class Authenticate {
+class NotAuthenticated {
 
     public function handle(Request $request, Closure $next): Response
     {
-        if (!$request->session()->has("id")) {
-            return redirect("/register");
+        if ($request->session()->has("id")) {
+            return redirect("/feed");
         }
 
         return $next($request);

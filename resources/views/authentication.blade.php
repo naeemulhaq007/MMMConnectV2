@@ -3,7 +3,7 @@
     <head>
         <title>MMMConnect | Login</title>
         <link href="{{asset('css/fa/css/all.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('css/notfound.css.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('css/notfound.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('css/pizza.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('css/register.css')}}" rel="stylesheet" type="text/css" />
 
