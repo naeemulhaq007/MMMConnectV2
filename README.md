@@ -1,6 +1,6 @@
 # MMMConnectV2
 
-A **Work in progress** recreation of my Computing Science 30AP project, [MMMConnect](https://github.com/WillQizza/MMMConnect), redeveloped in 2023.
+A **work in progress** recreation of my Computing Science 30AP project, [MMMConnect](https://github.com/WillQizza/MMMConnect), redeveloped in 2023.
 
 ## What is MMMConnect?
 
