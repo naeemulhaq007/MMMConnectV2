@@ -23,7 +23,7 @@
             <div class="one-third" id="authenticationBox">
                 <div class="box center">
                     <div class="box center center-text" id="loginHeader">
-                        <h1><span>MMM</span>Connect</h1>
+                        <h1><span>Zofatech</span>Software</h1>
                         <p>Login or signup below</p>
                     </div>
 

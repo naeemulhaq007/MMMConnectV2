@@ -4,6 +4,7 @@ use App\Http\Controllers\ConversationsController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\FriendRequestsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\RootController;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\NotAuthenticated;
@@ -24,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(NotAuthenticated::class)->group(function() {
     Route::prefix('/')->group(function() {
         Route::redirect('/', '/feed');
-        Route::get('/register', [RootController::class, 'register']);
+        Route::get('/register', [RootController::class, 'register'])->name('register');
         Route::post('/register', [RootController::class, 'register']);
     });
 });
@@ -46,13 +47,22 @@ Route::middleware(Authenticate::class)->group(function() {
         Route::post('/{id}/post/{post_id}/like', [ProfileController::class, 'like_profile_post']);
     });
 
+    // Route::resource('posts', 'PostController');
+    Route::view('/Testing', 'posts.test');
     Route::prefix('/feed')->group(function() {
-        Route::get('/', [FeedController::class, 'feed']);
-        Route::post('/post', [FeedController::class, 'post']);
+        Route::get('/', [PostController::class, 'feed'])->name('feed');
+        Route::match(['get', 'post'], '/post', [PostController::class, 'create'])->name('post');
+        Route::match(['get', 'post'], '/post/store', [PostController::class, 'store'])->name('posts.store');
         Route::post('/post/{id}/like', [FeedController::class, 'like_post']);
         Route::post('/post/{id}/edit', [FeedController::class, 'edit_post']);
         Route::post('/post/{id}/delete', [FeedController::class, 'delete_post']);
         Route::post('/post/{id}/comment', [FeedController::class, 'comment']);
+        // Route::get('/', [FeedController::class, 'feed']);
+        // Route::post('/post', [FeedController::class, 'post']);
+        // Route::post('/post/{id}/like', [FeedController::class, 'like_post']);
+        // Route::post('/post/{id}/edit', [FeedController::class, 'edit_post']);
+        // Route::post('/post/{id}/delete', [FeedController::class, 'delete_post']);
+        // Route::post('/post/{id}/comment', [FeedController::class, 'comment']);
     });
 
     Route::prefix('/requests')->group(function() {
